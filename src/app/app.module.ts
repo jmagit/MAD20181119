@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CommonAppModule } from './common-app/common-app.module';
 import { ClientesModule } from './clientes/clientes.module';
 import { ProveedoresModule } from './proveedores/proveedores.module';
-import { IndraCoreModule } from 'src/indra-core';
+import { IndraCoreModule, LoggerService } from 'src/indra-core';
 
 import { AppComponent } from './app.component';
 
@@ -19,7 +19,9 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     IndraCoreModule, CommonAppModule, ClientesModule, ProveedoresModule
   ],
-  providers: [],
+  providers: [
+    LoggerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
