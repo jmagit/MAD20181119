@@ -32,7 +32,7 @@ export class NotificationService {
 
   public add(msg: string, tipo: NotificationType = NotificationType.error): void {
     if (msg) {
-      const id = this.listado.length ? this.listado[this.listado.length].Id + 1 : 1;
+      const id = this.listado.length ? this.listado[this.listado.length - 1].Id + 1 : 1;
       this.listado.push(new NotificationModel(id, msg, tipo));
       if (tipo === NotificationType.error) {
         this.out.error(msg);

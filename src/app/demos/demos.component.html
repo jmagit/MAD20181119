@@ -23,7 +23,7 @@
 
 <ul>
   <li *ngFor="let item of listado; let i=index; let fondo=odd"
-    [style.background-color]="fondo ? 'LightBlue' : 'Lavender'">
+    [style.background-color]="fondo ? 'LightBlue' : 'Yellow'">
     {{item.nombre}} ({{item.id}}) Elemento {{i + 1}} de {{listado.length}}
   </li>
 </ul>
