@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { NotificationService } from '../common-app/notification.service';
-
-export type ModoCRUD = 'list' | 'add' | 'edit' | 'view' | 'delete';
+import { ModoCRUD } from '../code-base/MVVM';
 
 @Injectable({
   providedIn: 'root'
