@@ -6,6 +6,7 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { PersonasListComponent, PersonasViewComponent, PersonasEditComponent, PersonasAddComponent } from './personas/personas.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from './login/services';
+import { BlogListComponent, BlogAddComponent, BlogEditComponent, BlogViewComponent } from './blog/blog.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full' },
@@ -26,6 +27,13 @@ const routes: Routes = [
   ]},
   {path: 'pepito/grillo', redirectTo: '/personas/2' },
   {path: 'config', loadChildren: './config/config.module#ConfigModule' },
+  { path: 'blog', children: [
+    { path: '', component: BlogListComponent},
+    { path: 'add', component: BlogAddComponent},
+    { path: ':id/edit', component: BlogEditComponent},
+    { path: ':id', component: BlogViewComponent},
+    { path: ':id/:kk', component: BlogViewComponent},
+  ]},
   {path: '404.html', component: PageNotFoundComponent},
   {path: '**', component: PageNotFoundComponent},
 ];
