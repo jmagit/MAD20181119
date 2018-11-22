@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { tap, finalize } from 'rxjs/operators';
 import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class AuthService {
   private isAuth = false;
   private authToken: string = '';
