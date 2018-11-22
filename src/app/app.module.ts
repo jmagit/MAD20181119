@@ -25,6 +25,8 @@ import { PERSONAS_COMPONENTS } from './personas/personas.component';
 import { LoginComponent } from './login/login.component';
 import { PersonasViewModelService, PersonasViewModelDAOService } from './personas/personas.service';
 import { LoggingInterceptor, AuthInterceptor } from './login/services';
+import { MenuComponent } from './menu/menu.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { LoggingInterceptor, AuthInterceptor } from './login/services';
     DinamicoComponent,
     CalculadoraComponent,
     PERSONAS_COMPONENTS,
-    LoginComponent
+    LoginComponent,
+    MenuComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
